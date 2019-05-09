@@ -75,7 +75,7 @@ public class FrmModificacionProfesor extends javax.swing.JDialog {
             }
         });
 
-        jLabel7.setText("Modificar Profesor");
+        jLabel7.setText("Modificación Profesor");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

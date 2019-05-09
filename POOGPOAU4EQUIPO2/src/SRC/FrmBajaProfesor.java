@@ -161,10 +161,11 @@ public class FrmBajaProfesor extends javax.swing.JDialog {
                 JOptionPane.YES_NO_OPTION, 
                 JOptionPane.QUESTION_MESSAGE,
                 null);
-        if(respuesta == JOptionPane.YES_OPTION)
+        if(respuesta == JOptionPane.YES_OPTION){
             Principal.adp.eliminar(celda);
-        JOptionPane.showMessageDialog(this, "El profesor a sido eliminado satisfactoriamente", 
+            JOptionPane.showMessageDialog(this, "El profesor a sido eliminado satisfactoriamente", 
                         "Eliminación exitosa", JOptionPane.ERROR_MESSAGE);
+        }
         this.dispose();
     }//GEN-LAST:event_btnEliminarActionPerformed
 
