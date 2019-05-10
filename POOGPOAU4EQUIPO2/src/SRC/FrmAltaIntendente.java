@@ -150,8 +150,8 @@ public class FrmAltaIntendente extends javax.swing.JDialog {
                     btnGuardar.setEnabled(true);
                 }
                 else{
-                    JOptionPane.showMessageDialog(this, "Esa clave no esta registrada", 
-                            "CLAVE INEXISTENTE", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Esa clave ya esta registrada", 
+                            "CLAVE EXISTENTE", JOptionPane.ERROR_MESSAGE);
                 }
             }
             else{
