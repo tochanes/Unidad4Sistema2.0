@@ -28,6 +28,7 @@ public class FrmConsIndProfesor extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("CONSULTA INDIVIDUAL PROFESOR");
 
         jLabel3.setText("NOMBRE:");
@@ -50,6 +51,7 @@ public class FrmConsIndProfesor extends javax.swing.JDialog {
 
         txtHoras.setEditable(false);
 
+        txtClave.setEditable(false);
         txtClave.setText(" ");
         txtClave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,29 +66,32 @@ public class FrmConsIndProfesor extends javax.swing.JDialog {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel2))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 105, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
-                        .addGap(91, 91, 91))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtAñoIngreso, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtTitulo, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtDepartamento, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtHoras, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(9, 9, 9)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel2))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtDepartamento)
-                            .addComponent(txtTitulo)
                             .addComponent(txtNombre)
-                            .addComponent(txtAñoIngreso)
-                            .addComponent(txtHoras)
-                            .addComponent(txtClave))))
+                            .addComponent(txtClave, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(101, 101, 101)
+                .addComponent(jLabel1)
+                .addContainerGap(121, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,7 +122,7 @@ public class FrmConsIndProfesor extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(txtHoras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -128,18 +133,13 @@ public class FrmConsIndProfesor extends javax.swing.JDialog {
     }//GEN-LAST:event_txtClaveActionPerformed
         
         public void showMe(int celda){ 
-        String nombre, titulo, departamento;
-        int clave, añoIngreso, horas;
-        
-        clave = Integer.parseInt(txtClave.getText());
-        nombre = txtNombre.getText();
-        añoIngreso = Integer.parseInt(txtAñoIngreso.getText());
-        titulo = txtTitulo.getText();
-        departamento = txtDepartamento.getText();
-        horas = Integer.parseInt(txtHoras.getText());
-        per = new Profesor(clave, nombre, añoIngreso, titulo, departamento, horas);
-        Principal.adp.showMe(per, celda);
-        
+            per = Principal.adp.getPersonal(celda);
+            txtClave.setText(Integer.toString(per.getClave()));
+            txtNombre.setText(per.getNombre());
+            txtAñoIngreso.setText(Integer.toString(per.getAñoIngreso()));
+            txtTitulo.setText(((Profesor)per).getTitulo());
+            txtDepartamento.setText(((Profesor)per).getDepartamento());
+            txtHoras.setText(Integer.toString(((Profesor)per).getHoras()));
         }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

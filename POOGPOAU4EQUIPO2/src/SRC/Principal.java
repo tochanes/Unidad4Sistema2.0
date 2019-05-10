@@ -231,7 +231,8 @@ public class Principal extends javax.swing.JFrame {
 
     private void opcIndividualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcIndividualActionPerformed
         if(Principal.adp.getCont() > 0){   
-            //Consulta individual
+            FrmConsInd ci = new FrmConsInd(this, true);
+            ci.setVisible(true);
         }
         else {
             JOptionPane.showMessageDialog(this, "La agenda esta vacia",
