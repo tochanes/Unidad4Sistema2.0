@@ -168,7 +168,7 @@ public class FrmModificacionProfesor extends javax.swing.JDialog {
         this.dispose();
     }//GEN-LAST:event_formWindowClosed
     
-    public void modificar(int celda){
+    public void showMe(int celda){
         this.celda = celda;
         per = Principal.adp.getPersonal(celda);
         txtClave.setText(Integer.toString(per.getClave()));

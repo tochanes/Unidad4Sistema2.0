@@ -96,14 +96,14 @@ public class FrmModificacion extends javax.swing.JDialog {
             if(celda != -1){
                 if(Principal.adp.getPersonal(celda) instanceof Profesor){
                     FrmModificacionProfesor mp = new FrmModificacionProfesor(null, true);
-                    mp.modificar(celda);
+                    mp.showMe(celda);
                     this.dispose();
                     mp.setVisible(true);
                     
                 }
                 else {
                     FrmModificacionIntendente mi = new FrmModificacionIntendente(null, true);
-                    mi.modificar(celda);
+                    mi.showMe(celda);
                     this.dispose();
                     mi.setVisible(true);
                     

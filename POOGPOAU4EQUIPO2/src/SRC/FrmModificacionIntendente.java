@@ -161,7 +161,7 @@ public class FrmModificacionIntendente extends javax.swing.JDialog {
      * @param args the command line arguments
      */
    
-    public void modificar(int celda){
+    public void showMe(int celda){
         this.celda = celda;
         per = Principal.adp.getPersonal(celda);
         txtClave.setText(Integer.toString(per.getClave()));
