@@ -1,6 +1,7 @@
 package SRC;
 
 import java.util.Calendar;
+import javax.swing.JOptionPane;
 
 public class Principal extends javax.swing.JFrame {
 
@@ -93,6 +94,11 @@ public class Principal extends javax.swing.JFrame {
         jMenu3.setText("Consultas");
 
         opcIndividual.setText("Individual");
+        opcIndividual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                opcIndividualActionPerformed(evt);
+            }
+        });
         jMenu3.add(opcIndividual);
 
         jMenu5.setText("General");
@@ -147,39 +153,91 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_opcSalirActionPerformed
 
     private void opcProfesorAltasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcProfesorAltasActionPerformed
-        FrmAltaProfesor alt = new FrmAltaProfesor(this, true);
-        alt.setVisible(true);
+        if(Principal.adp.getCont() < 99){
+            FrmAltaProfesor ap = new FrmAltaProfesor(this, true);
+            ap.setVisible(true);
+        }
+        else {
+            JOptionPane.showMessageDialog(this, "La agenda ya esta llena",
+                        "AGENDA LLENA", JOptionPane.INFORMATION_MESSAGE);
+        }
     }//GEN-LAST:event_opcProfesorAltasActionPerformed
 
     private void opcIntendenteAltasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcIntendenteAltasActionPerformed
-        FrmAltaIntendente alt = new FrmAltaIntendente(this, true);
-        alt.setVisible(true);
+        if(Principal.adp.getCont() < 99){
+            FrmAltaIntendente ai = new FrmAltaIntendente(this, true);
+            ai.setVisible(true);
+        }
+        else {
+            JOptionPane.showMessageDialog(this, "La agenda ya esta llena",
+                        "AGENDA LLENA", JOptionPane.INFORMATION_MESSAGE);
+        }
     }//GEN-LAST:event_opcIntendenteAltasActionPerformed
 
     private void opcIntendenteTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcIntendenteTablaActionPerformed
-        FrmConsGnrlIntendente alt = new FrmConsGnrlIntendente(this, true);
-        alt.setVisible(true);
+        if(Principal.adp.getCont() > 0){
+            FrmConsGnrlIntendente cgi = new FrmConsGnrlIntendente(this, true);
+            cgi.setVisible(true);
+        }
+        else {
+            JOptionPane.showMessageDialog(this, "La agenda esta vacia",
+                        "AGENDA VACIA", JOptionPane.INFORMATION_MESSAGE);
+        }
     }//GEN-LAST:event_opcIntendenteTablaActionPerformed
 
     private void opcPersonalTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcPersonalTablaActionPerformed
-        FrmConsGnrlPersonal alt = new FrmConsGnrlPersonal(this, true);
-        alt.setVisible(true);
+        if(Principal.adp.getCont() > 0){       
+            FrmConsGnrlPersonal cgP = new FrmConsGnrlPersonal(this, true);
+            cgP.setVisible(true);
+        }
+        else {
+            JOptionPane.showMessageDialog(this, "La agenda esta vacia",
+                        "AGENDA VACIA", JOptionPane.INFORMATION_MESSAGE);
+        }
     }//GEN-LAST:event_opcPersonalTablaActionPerformed
 
     private void opcProfesoresTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcProfesoresTablaActionPerformed
-        FrmConsGnrlProfesor alt = new FrmConsGnrlProfesor(this, true);
-        alt.setVisible(true);
+        if(Principal.adp.getCont() > 0){        
+            FrmConsGnrlProfesor cgp = new FrmConsGnrlProfesor(this, true);
+            cgp.setVisible(true);
+        }
+        else {
+            JOptionPane.showMessageDialog(this, "La agenda esta vacia",
+                        "AGENDA VACIA", JOptionPane.INFORMATION_MESSAGE);
+        }
     }//GEN-LAST:event_opcProfesoresTablaActionPerformed
 
     private void opcBajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcBajaActionPerformed
-        FrmBaja alt = new FrmBaja(this, true);
-        alt.setVisible(true);
+        if(Principal.adp.getCont() > 0){
+            FrmBaja b = new FrmBaja(this, true);
+            b.setVisible(true);
+        }
+        else {
+            JOptionPane.showMessageDialog(this, "La agenda esta vacia",
+                        "AGENDA VACIA", JOptionPane.INFORMATION_MESSAGE);
+        }
     }//GEN-LAST:event_opcBajaActionPerformed
 
     private void opcModificacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcModificacionesActionPerformed
-        FrmModificacion alt = new FrmModificacion(this, true);
-        alt.setVisible(true);
+        if(Principal.adp.getCont() > 0){
+            FrmModificacion m = new FrmModificacion(this, true);
+            m.setVisible(true);
+        }
+        else {
+            JOptionPane.showMessageDialog(this, "La agenda esta vacia",
+                        "AGENDA VACIA", JOptionPane.INFORMATION_MESSAGE);
+        }
     }//GEN-LAST:event_opcModificacionesActionPerformed
+
+    private void opcIndividualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcIndividualActionPerformed
+        if(Principal.adp.getCont() > 0){   
+            //Consulta individual
+        }
+        else {
+            JOptionPane.showMessageDialog(this, "La agenda esta vacia",
+                        "AGENDA VACIA", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_opcIndividualActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
