@@ -83,36 +83,40 @@ public class FrmBaja extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
-        int clave =Integer.parseInt(txtClave.getText());
-        if(clave >= 101 && clave <= 999){
-            int celda = Principal.adp.getCelda(clave);
-            if(celda != -1){
-                if(Principal.adp.getPersonal(celda) instanceof Profesor){
-                    FrmBajaProfesor bp = new FrmBajaProfesor(null, true);
-                    bp.showMe(celda);
-                    this.dispose();
-                    bp.setVisible(true);
+        try{    
+            int clave =Integer.parseInt(txtClave.getText());
+            if(clave >= 101 && clave <= 999){
+                int celda = Principal.adp.getCelda(clave);
+                if(celda != -1){
+                    if(Principal.adp.getPersonal(celda) instanceof Profesor){
+                        FrmBajaProfesor bp = new FrmBajaProfesor(null, true);
+                        bp.showMe(celda);
+                        this.dispose();
+                        bp.setVisible(true);
+                    }
+                    else {
+                        FrmBajaIntendente bi = new FrmBajaIntendente(null, true);
+                        bi.showMe(celda);
+                        this.dispose();
+                        bi.setVisible(true);
+                    }
                 }
-                else {
-                    FrmBajaIntendente bi = new FrmBajaIntendente(null, true);
-                    bi.showMe(celda);
-                    this.dispose();
-                    bi.setVisible(true);
+                else{
+                    JOptionPane.showMessageDialog(this, "Esa clave no esta registrada", 
+                            "CLAVE INEXISTENTE", JOptionPane.ERROR_MESSAGE);
                 }
             }
             else{
-                JOptionPane.showMessageDialog(this, "Esa clave no esta registrada", 
-                        "Nombre inexistente", JOptionPane.ERROR_MESSAGE);
-                this.dispose();
+                JOptionPane.showMessageDialog(this, "Ingrese una clave de 101 a 999", 
+                            "CLAVE FUERA DE RANGO", JOptionPane.ERROR_MESSAGE);
             }
-        }
-        else{
-            JOptionPane.showMessageDialog(this, "Ingresó una clave fuera de rango,"
-                    + " ingrese una clave de 101 a 999", 
-                        "Clave fuera de rango", JOptionPane.ERROR_MESSAGE);
-            this.dispose();
-        }
-            
+        }catch(NumberFormatException nfe){
+            JOptionPane.showMessageDialog(this, "Ingresa numeros enteros ", 
+                            "CARÁCTER INVALIDO", JOptionPane.ERROR_MESSAGE);  
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(this, "Situacion anomala", 
+                            "INCERTIDUMBRE", JOptionPane.ERROR_MESSAGE);
+        } 
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     /**

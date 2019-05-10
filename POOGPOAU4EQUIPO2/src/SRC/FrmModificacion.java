@@ -90,38 +90,40 @@ public class FrmModificacion extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
-        int clave = Integer.parseInt(txtClave.getText());
-        if(clave >= 101 && clave <= 999){
-            int celda = Principal.adp.getCelda(clave);
-            if(celda != -1){
-                if(Principal.adp.getPersonal(celda) instanceof Profesor){
-                    FrmModificacionProfesor mp = new FrmModificacionProfesor(null, true);
-                    mp.showMe(celda);
-                    this.dispose();
-                    mp.setVisible(true);
-                    
+        try{   
+            int clave = Integer.parseInt(txtClave.getText());
+            if(clave >= 101 && clave <= 999){
+                int celda = Principal.adp.getCelda(clave);
+                if(celda != -1){
+                    if(Principal.adp.getPersonal(celda) instanceof Profesor){
+                        FrmModificacionProfesor mp = new FrmModificacionProfesor(null, true);
+                        mp.showMe(celda);
+                        this.dispose();
+                        mp.setVisible(true);
+                    }
+                    else {
+                        FrmModificacionIntendente mi = new FrmModificacionIntendente(null, true);
+                        mi.showMe(celda);
+                        this.dispose();
+                        mi.setVisible(true); 
+                    }
                 }
-                else {
-                    FrmModificacionIntendente mi = new FrmModificacionIntendente(null, true);
-                    mi.showMe(celda);
-                    this.dispose();
-                    mi.setVisible(true);
-                    
+                else{
+                    JOptionPane.showMessageDialog(this, "Esa clave no esta registrada", 
+                            "CLAVE INEXISTENTE", JOptionPane.ERROR_MESSAGE);
                 }
             }
             else{
-                JOptionPane.showMessageDialog(this, "Esa clave no esta registrada", 
-                        "Nombre inexistente", JOptionPane.ERROR_MESSAGE);
-                this.dispose();
+                JOptionPane.showMessageDialog(this, "Ingrese una clave de 101 a 999", 
+                            "CLAVE FUERA DE RANGO", JOptionPane.ERROR_MESSAGE);
             }
+        }catch(NumberFormatException nfe){
+            JOptionPane.showMessageDialog(this, "Ingresa solamente numeros enteros ", 
+                            "CARÁCTER INVALIDO", JOptionPane.ERROR_MESSAGE);  
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(this, "Situacion anomala", 
+                            "INCERTIDUMBRE", JOptionPane.ERROR_MESSAGE);
         }
-        else{
-            JOptionPane.showMessageDialog(this, "Ingresó una clave fuera de rango,"
-                    + " ingrese una clave de 101 a 999", 
-                        "Clave fuera de rango", JOptionPane.ERROR_MESSAGE);
-            this.dispose();
-        }
-        
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
