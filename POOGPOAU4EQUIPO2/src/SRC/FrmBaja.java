@@ -37,9 +37,9 @@ public class FrmBaja extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel1.setText("Clave:");
+        jLabel1.setText("CLAVE:");
 
-        btnBuscar.setText("Buscar");
+        btnBuscar.setText("BUSCAR");
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBuscarActionPerformed(evt);
@@ -79,6 +79,7 @@ public class FrmBaja extends javax.swing.JDialog {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
@@ -86,15 +87,15 @@ public class FrmBaja extends javax.swing.JDialog {
         if(clave >= 101 && clave <= 999){
             int celda = Principal.adp.getCelda(clave);
             if(celda != -1){
-                if(Principal.adp.queEs(celda) == 1){
+                if(Principal.adp.getPersonal(celda) instanceof Profesor){
                     FrmBajaProfesor bp = new FrmBajaProfesor(null, true);
-                    bp.modificar(celda);
+                    bp.showMe(celda);
                     this.dispose();
                     bp.setVisible(true);
                 }
                 else {
                     FrmBajaIntendente bi = new FrmBajaIntendente(null, true);
-                    bi.modificar(celda);
+                    bi.showMe(celda);
                     this.dispose();
                     bi.setVisible(true);
                 }
