@@ -100,7 +100,7 @@ public class FrmConsInd extends javax.swing.JDialog {
                             "CLAVE FUERA DE RANGO", JOptionPane.ERROR_MESSAGE);
             }
         }catch(NumberFormatException nfe){
-            JOptionPane.showMessageDialog(this, "Ingresa numeros enteros ", 
+            JOptionPane.showMessageDialog(this, "Ingresa solamente numeros enteros ", 
                             "CARÁCTER INVALIDO", JOptionPane.ERROR_MESSAGE);  
         }catch(Exception e){
             JOptionPane.showMessageDialog(this, "Situacion anomala", 

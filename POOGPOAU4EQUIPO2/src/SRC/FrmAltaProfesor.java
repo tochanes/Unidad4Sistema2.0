@@ -147,33 +147,37 @@ public class FrmAltaProfesor extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
-        int clave, celda;
-        clave = Integer.parseInt(txtClave.getText());
-        if(clave > 100 && clave < 1000)
-        {
-            celda = Principal.adp.getCelda(clave);
-            if(celda == -1)
-            {
-                txtClave.setEditable(false);
-                btnBuscar.setEnabled(false);
-                txtNombre.setEditable(true);
-                txtAñoIngreso.setEditable(true);
-                txtTitulo.setEditable(true);
-                txtDepartamento.setEditable(true);
-                txtHoras.setEditable(true);
-                btnGuardar.setEnabled(true);
+        try{    
+            int clave, celda;
+            clave = Integer.parseInt(txtClave.getText());
+            if(clave > 100 && clave < 1000){
+                celda = Principal.adp.getCelda(clave);
+                if(celda == -1){
+                    txtClave.setEditable(false);
+                    btnBuscar.setEnabled(false);
+                    txtNombre.setEditable(true);
+                    txtAñoIngreso.setEditable(true);
+                    txtTitulo.setEditable(true);
+                    txtDepartamento.setEditable(true);
+                    txtHoras.setEditable(true);
+                    btnGuardar.setEnabled(true);
+                }
+                else{
+                    JOptionPane.showMessageDialog(this, "Esa clave no esta registrada", 
+                            "CLAVE INEXISTENTE", JOptionPane.ERROR_MESSAGE);
+                }
             }
-            else
-            {
-                JOptionPane.showMessageDialog(this, "Clave en uso, ingrese otra clave",
-                        "CLAVE EXISTENTE", JOptionPane.INFORMATION_MESSAGE);
+            else{
+                JOptionPane.showMessageDialog(this, "Ingrese una clave de 101 a 999", 
+                            "CLAVE FUERA DE RANGO", JOptionPane.ERROR_MESSAGE);
             }
-        }
-        else
-        {
-            JOptionPane.showMessageDialog(this, "Fuera del rango permitido, ingrese otra clave", 
-                    "FUERA DEL RANGO", JOptionPane.INFORMATION_MESSAGE);
-        }
+        }catch(NumberFormatException nfe){
+            JOptionPane.showMessageDialog(this, "Ingresa solamente numeros enteros ", 
+                            "CARÁCTER INVALIDO", JOptionPane.ERROR_MESSAGE);  
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(this, "Situacion anomala", 
+                            "INCERTIDUMBRE", JOptionPane.ERROR_MESSAGE);
+        } 
         
     }//GEN-LAST:event_btnBuscarActionPerformed
 
