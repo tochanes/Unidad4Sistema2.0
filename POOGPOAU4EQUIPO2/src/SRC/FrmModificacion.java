@@ -120,9 +120,9 @@ public class FrmModificacion extends javax.swing.JDialog {
         }catch(NumberFormatException nfe){
             JOptionPane.showMessageDialog(this, "Ingresa solamente numeros enteros ", 
                             "CARÁCTER INVALIDO", JOptionPane.ERROR_MESSAGE);  
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(this, "Situacion anomala", 
-                            "INCERTIDUMBRE", JOptionPane.ERROR_MESSAGE);
+        }catch(RuntimeException e){
+            JOptionPane.showMessageDialog(this, "Situacion anomala en tiempo de ejecución, vuelve a intentarlo", 
+                            "SITUACIÓN ANOMALA", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btnBuscarActionPerformed
 
