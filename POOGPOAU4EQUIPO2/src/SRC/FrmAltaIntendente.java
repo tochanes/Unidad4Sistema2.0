@@ -31,6 +31,11 @@ public class FrmAltaIntendente extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 3, 14)); // NOI18N
@@ -58,12 +63,7 @@ public class FrmAltaIntendente extends javax.swing.JDialog {
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 209, -1, -1));
 
         txtClave.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtClave.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        txtClave.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtClaveActionPerformed(evt);
-            }
-        });
+        txtClave.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(txtClave, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 49, 219, -1));
 
         btnBuscar.setFont(new java.awt.Font("Century Gothic", 2, 11)); // NOI18N
@@ -81,22 +81,22 @@ public class FrmAltaIntendente extends javax.swing.JDialog {
 
         txtNombre.setEditable(false);
         txtNombre.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtNombre.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtNombre.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 89, 312, -1));
 
         txtAñoIngreso.setEditable(false);
         txtAñoIngreso.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtAñoIngreso.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtAñoIngreso.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(txtAñoIngreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 128, 312, -1));
 
         txtArea.setEditable(false);
         txtArea.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtArea.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtArea.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(txtArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 167, 312, -1));
 
         txtNivel.setEditable(false);
         txtNivel.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtNivel.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtNivel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(txtNivel, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 206, 312, -1));
 
         btnGuardar.setFont(new java.awt.Font("Century Gothic", 2, 11)); // NOI18N
@@ -199,13 +199,13 @@ public class FrmAltaIntendente extends javax.swing.JDialog {
         } 
     }//GEN-LAST:event_btnGuardarActionPerformed
 
-    private void txtClaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtClaveActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtClaveActionPerformed
-
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
         this.dispose();
     }//GEN-LAST:event_btnVolverActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        txtClave.requestFocus();
+    }//GEN-LAST:event_formWindowOpened
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBuscar;
