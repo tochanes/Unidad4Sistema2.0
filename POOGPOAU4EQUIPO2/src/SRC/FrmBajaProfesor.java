@@ -32,7 +32,6 @@ public class FrmBajaProfesor extends javax.swing.JDialog {
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosed(java.awt.event.WindowEvent evt) {
                 formWindowClosed(evt);
@@ -127,7 +126,7 @@ public class FrmBajaProfesor extends javax.swing.JDialog {
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo.jpg"))); // NOI18N
         fondo.setText("jLabel8");
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-520, -490, 970, 800));
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-520, -500, 970, 820));
 
         pack();
         setLocationRelativeTo(null);

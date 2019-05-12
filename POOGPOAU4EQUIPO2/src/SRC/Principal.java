@@ -19,6 +19,7 @@ public class Principal extends javax.swing.JFrame {
     private void initComponents() {
 
         jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         logoTECNM = new javax.swing.JLabel();
         copyright = new javax.swing.JLabel();
         bienvenido = new javax.swing.JLabel();
@@ -38,9 +39,13 @@ public class Principal extends javax.swing.JFrame {
         opcPersonalTabla = new javax.swing.JMenuItem();
         opcProfesoresTabla = new javax.swing.JMenuItem();
         opcIntendenteTabla = new javax.swing.JMenuItem();
+        jMenu6 = new javax.swing.JMenu();
+        opcAcercaDe = new javax.swing.JMenuItem();
 
         jCheckBoxMenuItem1.setSelected(true);
         jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
+
+        jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -50,7 +55,7 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().add(logoTECNM, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 60, -1, -1));
 
         copyright.setFont(new java.awt.Font("Comic Sans MS", 2, 9)); // NOI18N
-        copyright.setText("Sistema Unidad 4, Registro de Personal, v 2.0.0 All rights Reserved, 2019 ");
+        copyright.setText("Sistema Unidad 4, Registro de Personal, v 2.0.0 All Rights Reserved, 2019 ");
         getContentPane().add(copyright, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 380, -1, -1));
 
         bienvenido.setFont(new java.awt.Font("Century Gothic", 3, 48)); // NOI18N
@@ -60,14 +65,13 @@ public class Principal extends javax.swing.JFrame {
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo.jpg"))); // NOI18N
         fondo.setText(" ");
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-210, -210, 1030, 760));
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-210, -190, 1030, 760));
 
         jMenuBar1.setBackground(new java.awt.Color(159, 184, 215));
         jMenuBar1.setBorder(null);
         jMenuBar1.setBorderPainted(false);
 
         jMenu1.setText("Archivo");
-        jMenu1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenu1.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
 
         opcSalir.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
@@ -83,11 +87,10 @@ public class Principal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Acciones");
-        jMenu2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenu2.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
 
         jMenu4.setText("Alta");
-        jMenu4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jMenu4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenu4.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
 
         opcProfesorAltas.setFont(new java.awt.Font("Century Gothic", 2, 12)); // NOI18N
@@ -135,7 +138,7 @@ public class Principal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Consultas");
-        jMenu3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenu3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jMenu3.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
 
         opcIndividual.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
@@ -149,6 +152,7 @@ public class Principal extends javax.swing.JFrame {
         jMenu3.add(opcIndividual);
 
         jMenu5.setText("General");
+        jMenu5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenu5.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
 
         opcPersonalTabla.setFont(new java.awt.Font("Century Gothic", 2, 12)); // NOI18N
@@ -184,6 +188,22 @@ public class Principal extends javax.swing.JFrame {
         jMenu3.add(jMenu5);
 
         jMenuBar1.add(jMenu3);
+
+        jMenu6.setText("Arceca De");
+        jMenu6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jMenu6.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+
+        opcAcercaDe.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        opcAcercaDe.setText("Informacion");
+        opcAcercaDe.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        opcAcercaDe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                opcAcercaDeActionPerformed(evt);
+            }
+        });
+        jMenu6.add(opcAcercaDe);
+
+        jMenuBar1.add(jMenu6);
 
         setJMenuBar(jMenuBar1);
 
@@ -285,6 +305,14 @@ public class Principal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_opcIndividualActionPerformed
 
+    private void opcAcercaDeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcAcercaDeActionPerformed
+        FrmAcercaDe ad = new FrmAcercaDe(this, true);
+        ad.setVisible(true);
+        ad.setResizable(false);
+        ad.setLocationRelativeTo(null);
+
+    }//GEN-LAST:event_opcAcercaDeActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -332,8 +360,11 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JLabel logoTECNM;
+    private javax.swing.JMenuItem opcAcercaDe;
     private javax.swing.JMenuItem opcBaja;
     private javax.swing.JMenuItem opcIndividual;
     private javax.swing.JMenuItem opcIntendenteAltas;

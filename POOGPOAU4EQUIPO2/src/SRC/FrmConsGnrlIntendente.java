@@ -19,7 +19,6 @@ public class FrmConsGnrlIntendente extends javax.swing.JDialog {
         tablaPersonal = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
@@ -39,7 +38,7 @@ public class FrmConsGnrlIntendente extends javax.swing.JDialog {
                 "Clave", "Nombre", "Area"
             }
         ));
-        tablaPersonal.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        tablaPersonal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jScrollPane1.setViewportView(tablaPersonal);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 780, 275));

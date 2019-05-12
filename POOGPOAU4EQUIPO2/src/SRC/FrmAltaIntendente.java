@@ -63,7 +63,7 @@ public class FrmAltaIntendente extends javax.swing.JDialog {
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 209, -1, -1));
 
         txtClave.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtClave.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        txtClave.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         getContentPane().add(txtClave, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 49, 219, -1));
 
         btnBuscar.setFont(new java.awt.Font("Century Gothic", 2, 11)); // NOI18N
@@ -72,7 +72,7 @@ public class FrmAltaIntendente extends javax.swing.JDialog {
         btnBuscar.setToolTipText("Buscar");
         btnBuscar.setBorderPainted(false);
         btnBuscar.setContentAreaFilled(false);
-        btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBuscarActionPerformed(evt);
@@ -82,22 +82,22 @@ public class FrmAltaIntendente extends javax.swing.JDialog {
 
         txtNombre.setEditable(false);
         txtNombre.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtNombre.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        txtNombre.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         getContentPane().add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 89, 312, -1));
 
         txtAñoIngreso.setEditable(false);
         txtAñoIngreso.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtAñoIngreso.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        txtAñoIngreso.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         getContentPane().add(txtAñoIngreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 128, 312, -1));
 
         txtArea.setEditable(false);
         txtArea.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtArea.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        txtArea.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         getContentPane().add(txtArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 167, 312, -1));
 
         txtNivel.setEditable(false);
         txtNivel.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtNivel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        txtNivel.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         getContentPane().add(txtNivel, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 206, 312, -1));
 
         btnGuardar.setFont(new java.awt.Font("Century Gothic", 2, 11)); // NOI18N
@@ -106,7 +106,7 @@ public class FrmAltaIntendente extends javax.swing.JDialog {
         btnGuardar.setToolTipText("Guardar");
         btnGuardar.setBorderPainted(false);
         btnGuardar.setContentAreaFilled(false);
-        btnGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnGuardar.setEnabled(false);
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,7 +121,7 @@ public class FrmAltaIntendente extends javax.swing.JDialog {
         btnVolver.setToolTipText("Volver");
         btnVolver.setBorderPainted(false);
         btnVolver.setContentAreaFilled(false);
-        btnVolver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnVolver.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVolverActionPerformed(evt);

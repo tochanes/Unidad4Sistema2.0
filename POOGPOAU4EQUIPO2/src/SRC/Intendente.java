@@ -3,9 +3,7 @@ package SRC;
 public class Intendente extends Personal{
     private String area;
     private int nivel;
-    
-    public Intendente(){}
-    
+
     public Intendente(int clave, String nombre, int añoIngreso, String area, int nivel) {
         super(clave, nombre, añoIngreso);
         this.area = area;

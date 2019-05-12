@@ -2,15 +2,13 @@ package SRC;
 
 public class Profesor extends Personal {
     private String titulo;
-    private String departamento;
+    private String departaento;
     private int horas;
-    
-    public Profesor(){}
 
     public Profesor(int clave, String nombre, int añoIngreso, String titulo, String departamento, int horas) {
         super(clave, nombre, añoIngreso);
         this.titulo = titulo;
-        this.departamento = departamento;
+        this.departaento = departamento;
         this.horas = horas;
     }
 
@@ -23,11 +21,11 @@ public class Profesor extends Personal {
     }
 
     public String getDepartamento() {
-        return departamento;
+        return departaento;
     }
 
-    public void setDepartaento(String departamento) {
-        this.departamento = departamento;
+    public void setDepartaento(String departaento) {
+        this.departaento = departaento;
     }
 
     public int getHoras() {

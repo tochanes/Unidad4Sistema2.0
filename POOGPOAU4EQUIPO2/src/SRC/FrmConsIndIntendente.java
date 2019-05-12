@@ -1,6 +1,5 @@
 package SRC;
 import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
 public class FrmConsIndIntendente extends javax.swing.JDialog {
     Personal per;
     
@@ -30,7 +29,6 @@ public class FrmConsIndIntendente extends javax.swing.JDialog {
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosed(java.awt.event.WindowEvent evt) {
                 formWindowClosed(evt);
@@ -119,11 +117,6 @@ public class FrmConsIndIntendente extends javax.swing.JDialog {
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
         this.dispose();
     }//GEN-LAST:event_btnVolverActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-   
     public void showMe(int celda){
         per = Principal.adp.getPersonal(celda);
         txtClave.setText(Integer.toString(per.getClave()));
