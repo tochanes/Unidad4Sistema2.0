@@ -144,13 +144,19 @@ public class FrmModificacionIntendente extends javax.swing.JDialog {
             clave = Integer.parseInt(txtClave.getText());
             nombre = txtNombre.getText();
             añoIngreso = Integer.parseInt(txtAñoIngreso.getText());
-            area = txtArea.getText();
-            nivel = Integer.parseInt(txtNivel.getText());
-            per = new Intendente(clave, nombre, añoIngreso, area, nivel);
-            Principal.adp.modificar(per, celda);
-            JOptionPane.showMessageDialog(this, "Se ha modificado al intendente con exito", 
-                        "MODIFICACION EXITOSA", JOptionPane.INFORMATION_MESSAGE);
-            this.dispose();
+            if(añoIngreso > Principal.añoActual){
+                JOptionPane.showMessageDialog(this, "Ingresaste un año futuro, ingresa un año correcto",
+                        "AÑO FUTURO", JOptionPane.INFORMATION_MESSAGE);
+            } 
+            else{
+                area = txtArea.getText();
+                nivel = Integer.parseInt(txtNivel.getText());
+                per = new Intendente(clave, nombre, añoIngreso, area, nivel);
+                Principal.adp.modificar(per, celda);
+                JOptionPane.showMessageDialog(this, "Se ha modificado al intendente con exito", 
+                            "MODIFICACION EXITOSA", JOptionPane.INFORMATION_MESSAGE);
+                this.dispose();
+            }
         }catch(NumberFormatException nfe){
             JOptionPane.showMessageDialog(this, "Ingresa solamente numeros enteros donde corresponda", 
                             "CARÁCTER INVALIDO", JOptionPane.ERROR_MESSAGE);  

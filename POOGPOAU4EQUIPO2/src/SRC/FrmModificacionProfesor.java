@@ -154,14 +154,20 @@ public class FrmModificacionProfesor extends javax.swing.JDialog {
             clave = Integer.parseInt(txtClave.getText());
             nombre = txtNombre.getText();
             añoIngreso = Integer.parseInt(txtAñoIngreso.getText());
-            titulo = txtTitulo.getText();
-            departamento = txtDepartamento.getText();
-            horas = Integer.parseInt(txtHoras.getText());
-            per = new Profesor(clave, nombre, añoIngreso, titulo, departamento, horas);
-            Principal.adp.modificar(per, celda);
-            JOptionPane.showMessageDialog(this, "Se ha modificado al profesor con exito", 
-                        "MODIFICACION EXITOSA", JOptionPane.INFORMATION_MESSAGE);
-            this.dispose();
+            if(añoIngreso > Principal.añoActual){
+                JOptionPane.showMessageDialog(this, "Ingresaste un año futuro, ingresa un año correcto",
+                        "AÑO FUTURO", JOptionPane.INFORMATION_MESSAGE);
+            } 
+            else{
+                titulo = txtTitulo.getText();
+                departamento = txtDepartamento.getText();
+                horas = Integer.parseInt(txtHoras.getText());
+                per = new Profesor(clave, nombre, añoIngreso, titulo, departamento, horas);
+                Principal.adp.modificar(per, celda);
+                JOptionPane.showMessageDialog(this, "Se ha modificado al profesor con exito", 
+                            "MODIFICACION EXITOSA", JOptionPane.INFORMATION_MESSAGE);
+                this.dispose();
+            }
         }catch(NumberFormatException nfe){
             JOptionPane.showMessageDialog(this, "Ingresa solamente numeros enteros donde corresponda", 
                             "CARÁCTER INVALIDO", JOptionPane.ERROR_MESSAGE);  

@@ -171,18 +171,25 @@ public class FrmAltaIntendente extends javax.swing.JDialog {
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         int clave, añoIngreso, nivel;
         String nombre, area;
+        
         try{
             clave = Integer.parseInt(txtClave.getText());
             nombre = txtNombre.getText();
             añoIngreso = Integer.parseInt(txtAñoIngreso.getText());
-            area = txtArea.getText();
-            nivel = Integer.parseInt(txtNivel.getText());
-            Personal pers = new Intendente(clave, nombre, añoIngreso, area, nivel);
+            if(añoIngreso > Principal.añoActual){
+            JOptionPane.showMessageDialog(this, "Ingresaste un año futuro, ingresa un año correcto",
+                    "AÑO FUTURO", JOptionPane.INFORMATION_MESSAGE);
+            }
+            else{
+                area = txtArea.getText();
+                nivel = Integer.parseInt(txtNivel.getText());
+                Personal pers = new Intendente(clave, nombre, añoIngreso, area, nivel);
 
-            Principal.adp.agregar(pers);
-            JOptionPane.showMessageDialog(this, "Guardado con exito",
-                    "GUARDADO", JOptionPane.INFORMATION_MESSAGE);
-            this.dispose();
+                Principal.adp.agregar(pers);
+                JOptionPane.showMessageDialog(this, "Guardado con exito",
+                        "GUARDADO", JOptionPane.INFORMATION_MESSAGE);
+                this.dispose();
+            }
         }catch(NumberFormatException nfe){
             JOptionPane.showMessageDialog(this, "Ingresa solamente numeros enteros donde corresponda", 
                             "CARÁCTER INVALIDO", JOptionPane.ERROR_MESSAGE);  
