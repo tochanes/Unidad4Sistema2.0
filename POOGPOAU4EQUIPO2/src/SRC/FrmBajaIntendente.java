@@ -159,7 +159,11 @@ public class FrmBajaIntendente extends javax.swing.JDialog {
         if(respuesta == JOptionPane.YES_OPTION){
             Principal.adp.eliminar(celda);
             JOptionPane.showMessageDialog(this, "El intendente a sido eliminado satisfactoriamente", 
-                        "Eliminación exitosa", JOptionPane.ERROR_MESSAGE);
+                        "ELIMINACION EXITOSA", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "No se ha realizado la eliminación", 
+                        "ELIMINACION CANCELADA", JOptionPane.ERROR_MESSAGE);
         }
         this.dispose();
     }//GEN-LAST:event_btnEliminarActionPerformed
