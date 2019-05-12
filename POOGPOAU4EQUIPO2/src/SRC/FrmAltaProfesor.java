@@ -106,6 +106,7 @@ public class FrmAltaProfesor extends javax.swing.JDialog {
         btnBuscar.setToolTipText("Buscar");
         btnBuscar.setBorderPainted(false);
         btnBuscar.setContentAreaFilled(false);
+        btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBuscarActionPerformed(evt);
@@ -119,6 +120,7 @@ public class FrmAltaProfesor extends javax.swing.JDialog {
         btnGuardar.setToolTipText("Guardar");
         btnGuardar.setBorderPainted(false);
         btnGuardar.setContentAreaFilled(false);
+        btnGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnGuardar.setEnabled(false);
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,6 +135,7 @@ public class FrmAltaProfesor extends javax.swing.JDialog {
         btnVolver.setToolTipText("Volver");
         btnVolver.setBorderPainted(false);
         btnVolver.setContentAreaFilled(false);
+        btnVolver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVolverActionPerformed(evt);

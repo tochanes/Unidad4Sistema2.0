@@ -98,6 +98,7 @@ public class FrmBajaProfesor extends javax.swing.JDialog {
         btnEliminar.setToolTipText("Eliminar");
         btnEliminar.setBorderPainted(false);
         btnEliminar.setContentAreaFilled(false);
+        btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarActionPerformed(evt);
@@ -115,6 +116,7 @@ public class FrmBajaProfesor extends javax.swing.JDialog {
         btnVolver.setToolTipText("Volver");
         btnVolver.setBorderPainted(false);
         btnVolver.setContentAreaFilled(false);
+        btnVolver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVolverActionPerformed(evt);

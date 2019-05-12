@@ -91,6 +91,7 @@ public class FrmModificacionProfesor extends javax.swing.JDialog {
         btnModificar.setToolTipText("Modificar");
         btnModificar.setBorderPainted(false);
         btnModificar.setContentAreaFilled(false);
+        btnModificar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnModificarActionPerformed(evt);
@@ -108,6 +109,7 @@ public class FrmModificacionProfesor extends javax.swing.JDialog {
         btnVolver.setToolTipText("Volver");
         btnVolver.setBorderPainted(false);
         btnVolver.setContentAreaFilled(false);
+        btnVolver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVolverActionPerformed(evt);

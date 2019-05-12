@@ -67,10 +67,12 @@ public class Principal extends javax.swing.JFrame {
         jMenuBar1.setBorderPainted(false);
 
         jMenu1.setText("Archivo");
+        jMenu1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenu1.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
 
         opcSalir.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         opcSalir.setText("Salir");
+        opcSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         opcSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 opcSalirActionPerformed(evt);
@@ -81,13 +83,16 @@ public class Principal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Acciones");
+        jMenu2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenu2.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
 
         jMenu4.setText("Alta");
+        jMenu4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jMenu4.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
 
         opcProfesorAltas.setFont(new java.awt.Font("Century Gothic", 2, 12)); // NOI18N
         opcProfesorAltas.setText("Profesor");
+        opcProfesorAltas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         opcProfesorAltas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 opcProfesorAltasActionPerformed(evt);
@@ -97,6 +102,7 @@ public class Principal extends javax.swing.JFrame {
 
         opcIntendenteAltas.setFont(new java.awt.Font("Century Gothic", 2, 12)); // NOI18N
         opcIntendenteAltas.setText("Intendente");
+        opcIntendenteAltas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         opcIntendenteAltas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 opcIntendenteAltasActionPerformed(evt);
@@ -108,6 +114,7 @@ public class Principal extends javax.swing.JFrame {
 
         opcModificaciones.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         opcModificaciones.setText("Modificacion");
+        opcModificaciones.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         opcModificaciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 opcModificacionesActionPerformed(evt);
@@ -117,6 +124,7 @@ public class Principal extends javax.swing.JFrame {
 
         opcBaja.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         opcBaja.setText("Baja");
+        opcBaja.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         opcBaja.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 opcBajaActionPerformed(evt);
@@ -127,10 +135,12 @@ public class Principal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Consultas");
+        jMenu3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenu3.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
 
         opcIndividual.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         opcIndividual.setText("Individual");
+        opcIndividual.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         opcIndividual.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 opcIndividualActionPerformed(evt);
@@ -143,6 +153,7 @@ public class Principal extends javax.swing.JFrame {
 
         opcPersonalTabla.setFont(new java.awt.Font("Century Gothic", 2, 12)); // NOI18N
         opcPersonalTabla.setText("Personal");
+        opcPersonalTabla.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         opcPersonalTabla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 opcPersonalTablaActionPerformed(evt);
@@ -152,6 +163,7 @@ public class Principal extends javax.swing.JFrame {
 
         opcProfesoresTabla.setFont(new java.awt.Font("Century Gothic", 2, 12)); // NOI18N
         opcProfesoresTabla.setText("Profesores");
+        opcProfesoresTabla.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         opcProfesoresTabla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 opcProfesoresTablaActionPerformed(evt);
@@ -161,6 +173,7 @@ public class Principal extends javax.swing.JFrame {
 
         opcIntendenteTabla.setFont(new java.awt.Font("Century Gothic", 2, 12)); // NOI18N
         opcIntendenteTabla.setText("Intendentes");
+        opcIntendenteTabla.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         opcIntendenteTabla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 opcIntendenteTablaActionPerformed(evt);
