@@ -123,18 +123,31 @@ public class FrmModificacionProfesor extends javax.swing.JDialog {
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
         String nombre, titulo, departamento;
         int clave, añoIngreso, horas;
-        
-        clave = Integer.parseInt(txtClave.getText());
-        nombre = txtNombre.getText();
-        añoIngreso = Integer.parseInt(txtAñoIngreso.getText());
-        titulo = txtTitulo.getText();
-        departamento = txtDepartamento.getText();
-        horas = Integer.parseInt(txtHoras.getText());
-        per = new Profesor(clave, nombre, añoIngreso, titulo, departamento, horas);
-        Principal.adp.modificar(per, celda);
-        JOptionPane.showMessageDialog(this, "Se ha modificado al profesor con exito", 
-                    "Modificacion Exitosa", JOptionPane.INFORMATION_MESSAGE);
-        this.dispose();
+        try{
+            clave = Integer.parseInt(txtClave.getText());
+            nombre = txtNombre.getText();
+            añoIngreso = Integer.parseInt(txtAñoIngreso.getText());
+            if(añoIngreso > Principal.añoActual){
+                JOptionPane.showMessageDialog(this, "Ingresaste un año futuro, ingresa un año correcto",
+                        "AÑO FUTURO", JOptionPane.INFORMATION_MESSAGE);
+            } 
+            else{
+                titulo = txtTitulo.getText();
+                departamento = txtDepartamento.getText();
+                horas = Integer.parseInt(txtHoras.getText());
+                per = new Profesor(clave, nombre, añoIngreso, titulo, departamento, horas);
+                Principal.adp.modificar(per, celda);
+                JOptionPane.showMessageDialog(this, "Se ha modificado al profesor con exito", 
+                            "MODIFICACION EXITOSA", JOptionPane.INFORMATION_MESSAGE);
+                this.dispose();
+            }
+        }catch(NumberFormatException nfe){
+            JOptionPane.showMessageDialog(this, "Ingresa solamente numeros enteros donde corresponda", 
+                            "CARÁCTER INVALIDO", JOptionPane.ERROR_MESSAGE);  
+        }catch(RuntimeException e){
+            JOptionPane.showMessageDialog(this, "Situacion anomala en tiempo de ejecución, vuelve a intentarlo", 
+                            "SITUACIÓN ANOMALA", JOptionPane.ERROR_MESSAGE);
+        } 
     }//GEN-LAST:event_btnModificarActionPerformed
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed

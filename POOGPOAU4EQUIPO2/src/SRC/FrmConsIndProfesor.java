@@ -82,11 +82,6 @@ public class FrmConsIndProfesor extends javax.swing.JDialog {
         txtClave.setEditable(false);
         txtClave.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         txtClave.setText(" ");
-        txtClave.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtClaveActionPerformed(evt);
-            }
-        });
         getContentPane().add(txtClave, new org.netbeans.lib.awtextra.AbsoluteConstraints(114, 48, 323, -1));
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
@@ -112,19 +107,15 @@ public class FrmConsIndProfesor extends javax.swing.JDialog {
                 btnVolverActionPerformed(evt);
             }
         });
-        getContentPane().add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 50, -1));
+        getContentPane().add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 50, -1));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo.jpg"))); // NOI18N
         fondo.setText(" ");
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-520, -490, 970, -1));
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-520, -480, 970, -1));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtClaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtClaveActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtClaveActionPerformed
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
         this.dispose();

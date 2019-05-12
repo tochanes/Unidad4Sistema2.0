@@ -25,19 +25,19 @@ public class FrmBaja extends javax.swing.JDialog {
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
         jLabel1.setText("CLAVE:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 44, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, 20));
 
-        btnBuscar.setText("BUSCAR");
+        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/bsq.png"))); // NOI18N
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBuscarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(129, 41, -1, -1));
+        getContentPane().add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 30, 30));
 
         txtClave.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtClave.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        getContentPane().add(txtClave, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 41, 70, -1));
+        txtClave.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        getContentPane().add(txtClave, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 70, -1));
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 3, 14)); // NOI18N
         jLabel2.setText("BAJAS");
@@ -58,7 +58,7 @@ public class FrmBaja extends javax.swing.JDialog {
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/mini.jpg"))); // NOI18N
         fondo.setText(" ");
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-180, 0, 400, 80));
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-190, 0, 400, 100));
 
         pack();
         setLocationRelativeTo(null);

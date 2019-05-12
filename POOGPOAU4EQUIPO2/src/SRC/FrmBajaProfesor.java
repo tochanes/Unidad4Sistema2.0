@@ -41,33 +41,33 @@ public class FrmBajaProfesor extends javax.swing.JDialog {
 
         txtClave.setEditable(false);
         txtClave.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtClave.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtClave.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(txtClave, new org.netbeans.lib.awtextra.AbsoluteConstraints(107, 53, 328, -1));
 
         txtNombre.setEditable(false);
         txtNombre.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtNombre.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtNombre.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 85, 326, -1));
 
         txtAñoIngreso.setEditable(false);
         txtAñoIngreso.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtAñoIngreso.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtAñoIngreso.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(txtAñoIngreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 124, 326, -1));
 
         txtTitulo.setEditable(false);
         txtTitulo.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtTitulo.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        getContentPane().add(txtTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 163, 326, -1));
+        txtTitulo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        getContentPane().add(txtTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 326, -1));
 
         txtDepartamento.setEditable(false);
         txtDepartamento.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtDepartamento.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        getContentPane().add(txtDepartamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(107, 191, 328, -1));
+        txtDepartamento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        getContentPane().add(txtDepartamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 328, -1));
 
         txtHoras.setEditable(false);
         txtHoras.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtHoras.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        getContentPane().add(txtHoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(107, 230, 328, -1));
+        txtHoras.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        getContentPane().add(txtHoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 328, -1));
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
         jLabel1.setText("CLAVE:");
@@ -87,11 +87,11 @@ public class FrmBajaProfesor extends javax.swing.JDialog {
 
         jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
         jLabel5.setText("DEPARTAMENTO:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 197, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
         jLabel6.setText("HORAS:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 233, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, -1, -1));
 
         btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/elm.png"))); // NOI18N
         btnEliminar.setText(" ");
@@ -103,7 +103,7 @@ public class FrmBajaProfesor extends javax.swing.JDialog {
                 btnEliminarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 257, 307, 32));
+        getContentPane().add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 307, 32));
 
         jLabel7.setFont(new java.awt.Font("Century Gothic", 3, 14)); // NOI18N
         jLabel7.setText("BAJA PROFESOR");
@@ -124,7 +124,7 @@ public class FrmBajaProfesor extends javax.swing.JDialog {
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo.jpg"))); // NOI18N
         fondo.setText("jLabel8");
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-520, -500, 970, -1));
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-520, -500, 970, 820));
 
         pack();
         setLocationRelativeTo(null);
@@ -139,8 +139,12 @@ public class FrmBajaProfesor extends javax.swing.JDialog {
         if(respuesta == JOptionPane.YES_OPTION){
             Principal.adp.eliminar(celda);
             JOptionPane.showMessageDialog(this, "El profesor a sido eliminado satisfactoriamente", 
-                        "Eliminación exitosa", JOptionPane.ERROR_MESSAGE);
+                        "ELIMINACION EXITOSA", JOptionPane.ERROR_MESSAGE);
+        }else{
+              JOptionPane.showMessageDialog(this, "No se ha realizado la eliminación", 
+                        "ELIMINACION CANCELADA", JOptionPane.ERROR_MESSAGE);
         }
+        
         this.dispose();
     }//GEN-LAST:event_btnEliminarActionPerformed
 

@@ -83,11 +83,11 @@ public class FrmConsIndIntendente extends javax.swing.JDialog {
 
         jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
         jLabel5.setText("UTILIDAD:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 235, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, -1, -1));
 
         txtUtilidad.setEditable(false);
         txtUtilidad.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        getContentPane().add(txtUtilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 232, 325, -1));
+        getContentPane().add(txtUtilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 325, -1));
 
         btnVolver.setFont(new java.awt.Font("Century Gothic", 2, 11)); // NOI18N
         btnVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/vlv.png"))); // NOI18N
@@ -104,7 +104,7 @@ public class FrmConsIndIntendente extends javax.swing.JDialog {
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo.jpg"))); // NOI18N
         fondo.setText(" ");
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-520, -530, 970, -1));
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-520, -520, 970, 800));
 
         pack();
         setLocationRelativeTo(null);

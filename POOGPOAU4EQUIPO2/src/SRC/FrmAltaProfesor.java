@@ -67,32 +67,32 @@ public class FrmAltaProfesor extends javax.swing.JDialog {
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 248, -1, -1));
 
         txtClave.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtClave.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtClave.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(txtClave, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 48, 221, -1));
 
         txtNombre.setEditable(false);
         txtNombre.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtNombre.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtNombre.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 89, 312, -1));
 
         txtAñoIngreso.setEditable(false);
         txtAñoIngreso.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtAñoIngreso.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtAñoIngreso.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(txtAñoIngreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 128, 312, -1));
 
         txtTitulo.setEditable(false);
         txtTitulo.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtTitulo.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtTitulo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(txtTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 167, 312, -1));
 
         txtDepartamento.setEditable(false);
         txtDepartamento.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtDepartamento.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtDepartamento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(txtDepartamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 206, 312, -1));
 
         txtHoras.setEditable(false);
         txtHoras.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtHoras.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtHoras.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(txtHoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 245, 312, -1));
 
         btnBuscar.setFont(new java.awt.Font("Century Gothic", 2, 11)); // NOI18N
@@ -144,7 +144,7 @@ public class FrmAltaProfesor extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
-        try{
+        try{    
             int clave, celda;
             clave = Integer.parseInt(txtClave.getText());
             if(clave > 100 && clave < 1000){
@@ -160,21 +160,22 @@ public class FrmAltaProfesor extends javax.swing.JDialog {
                     btnGuardar.setEnabled(true);
                 }
                 else{
-                    JOptionPane.showMessageDialog(this, "Esa clave ya esta registrada",
-                        "CLAVE EXISTENTE", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Esa clave ya esta registrada", 
+                            "CLAVE EXISTENTE", JOptionPane.ERROR_MESSAGE);
                 }
             }
             else{
-                JOptionPane.showMessageDialog(this, "Ingrese una clave de 101 a 999",
-                    "CLAVE FUERA DE RANGO", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Ingrese una clave de 101 a 999", 
+                            "CLAVE FUERA DE RANGO", JOptionPane.ERROR_MESSAGE);
             }
         }catch(NumberFormatException nfe){
-            JOptionPane.showMessageDialog(this, "Ingresa solamente numeros enteros ",
-                "CARÁCTER INVALIDO", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Ingresa solamente numeros enteros ", 
+                            "CARÁCTER INVALIDO", JOptionPane.ERROR_MESSAGE);  
         }catch(RuntimeException e){
-            JOptionPane.showMessageDialog(this, "Situacion anomala en tiempo de ejecución, vuelve a intentarlo",
-                "SITUACION ANOMALA", JOptionPane.ERROR_MESSAGE);
-        }
+            JOptionPane.showMessageDialog(this, "Situacion anomala en tiempo de ejecución, vuelve a intentarlo", 
+                            "SITUACIÓN ANOMALA", JOptionPane.ERROR_MESSAGE);
+        } 
+        
 
     }//GEN-LAST:event_btnBuscarActionPerformed
 

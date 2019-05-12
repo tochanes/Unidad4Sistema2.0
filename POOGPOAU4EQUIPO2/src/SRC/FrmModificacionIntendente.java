@@ -114,17 +114,30 @@ public class FrmModificacionIntendente extends javax.swing.JDialog {
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
         String nombre, area;
         int clave, añoIngreso, nivel;
-        
-        clave = Integer.parseInt(txtClave.getText());
-        nombre = txtNombre.getText();
-        añoIngreso = Integer.parseInt(txtAñoIngreso.getText());
-        area = txtArea.getText();
-        nivel = Integer.parseInt(txtNivel.getText());
-        per = new Intendente(clave, nombre, añoIngreso, area, nivel);
-        Principal.adp.modificar(per, celda);
-        JOptionPane.showMessageDialog(this, "Se ha modificado al intendente con exito", 
-                    "Modificacion Exitosa", JOptionPane.INFORMATION_MESSAGE);
-        this.dispose();
+        try{
+            clave = Integer.parseInt(txtClave.getText());
+            nombre = txtNombre.getText();
+            añoIngreso = Integer.parseInt(txtAñoIngreso.getText());
+            if(añoIngreso > Principal.añoActual){
+                JOptionPane.showMessageDialog(this, "Ingresaste un año futuro, ingresa un año correcto",
+                        "AÑO FUTURO", JOptionPane.INFORMATION_MESSAGE);
+            } 
+            else{
+                area = txtArea.getText();
+                nivel = Integer.parseInt(txtNivel.getText());
+                per = new Intendente(clave, nombre, añoIngreso, area, nivel);
+                Principal.adp.modificar(per, celda);
+                JOptionPane.showMessageDialog(this, "Se ha modificado al intendente con exito", 
+                            "MODIFICACION EXITOSA", JOptionPane.INFORMATION_MESSAGE);
+                this.dispose();
+            }
+        }catch(NumberFormatException nfe){
+            JOptionPane.showMessageDialog(this, "Ingresa solamente numeros enteros donde corresponda", 
+                            "CARÁCTER INVALIDO", JOptionPane.ERROR_MESSAGE);  
+        }catch(RuntimeException e){
+            JOptionPane.showMessageDialog(this, "Situacion anomala en tiempo de ejecución, vuelve a intentarlo", 
+                            "SITUACIÓN ANOMALA", JOptionPane.ERROR_MESSAGE);
+        } 
     }//GEN-LAST:event_btnModificarActionPerformed
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed

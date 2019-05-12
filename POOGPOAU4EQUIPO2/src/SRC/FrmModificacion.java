@@ -17,6 +17,7 @@ public class FrmModificacion extends javax.swing.JDialog {
         jLabel1 = new javax.swing.JLabel();
         btnBuscar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        btnVolver = new javax.swing.JButton();
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -28,27 +29,40 @@ public class FrmModificacion extends javax.swing.JDialog {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtClave.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        getContentPane().add(txtClave, new org.netbeans.lib.awtextra.AbsoluteConstraints(55, 43, 69, -1));
+        getContentPane().add(txtClave, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 69, -1));
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
         jLabel1.setText("CLAVE:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 46, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, 20));
 
-        btnBuscar.setText("BUSCAR");
+        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/bsq.png"))); // NOI18N
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBuscarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 43, -1, -1));
+        getContentPane().add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 30, 30));
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 3, 14)); // NOI18N
         jLabel2.setText("MODIFICACIÓN");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 13, -1, -1));
 
+        btnVolver.setFont(new java.awt.Font("Century Gothic", 2, 11)); // NOI18N
+        btnVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/vlv.png"))); // NOI18N
+        btnVolver.setText(" ");
+        btnVolver.setToolTipText("Volver");
+        btnVolver.setBorderPainted(false);
+        btnVolver.setContentAreaFilled(false);
+        btnVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 40, -1));
+
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/mini.jpg"))); // NOI18N
         fondo.setText(" ");
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-150, 0, 370, -1));
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-150, 0, 380, 100));
 
         pack();
         setLocationRelativeTo(null);
@@ -95,12 +109,17 @@ public class FrmModificacion extends javax.swing.JDialog {
        this.dispose();
     }//GEN-LAST:event_formWindowClosed
 
+    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnVolverActionPerformed
+
     /**
      * @param args the command line arguments
      */
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBuscar;
+    private javax.swing.JButton btnVolver;
     private javax.swing.JLabel fondo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

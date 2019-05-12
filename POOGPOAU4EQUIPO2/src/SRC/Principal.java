@@ -2,9 +2,10 @@ package SRC;
 import java.util.Calendar;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+
 public class Principal extends javax.swing.JFrame {
 
-    static AdmonPersonal adp = new AdmonPersonal();
+    public static AdmonPersonal adp = new AdmonPersonal();
     public static Calendar cal = Calendar.getInstance();
     public static int añoActual = cal.get(Calendar.YEAR);
     
@@ -184,10 +185,8 @@ public class Principal extends javax.swing.JFrame {
     private void opcProfesorAltasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcProfesorAltasActionPerformed
         if(Principal.adp.getCont() < 99){
             FrmAltaProfesor ap = new FrmAltaProfesor(this, true);
-            
             ap.setVisible(true);
-            ap.setResizable(false);
-            
+            ap.setResizable(false); 
         }
         else {
             JOptionPane.showMessageDialog(this, "La agenda ya esta llena",
@@ -198,11 +197,8 @@ public class Principal extends javax.swing.JFrame {
     private void opcIntendenteAltasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcIntendenteAltasActionPerformed
         if(Principal.adp.getCont() < 99){
             FrmAltaIntendente ai = new FrmAltaIntendente(this, true);
-            
-            
             ai.setVisible(true);
             ai.setResizable(false);
-           
         }
         else {
             JOptionPane.showMessageDialog(this, "La agenda ya esta llena",

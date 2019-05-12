@@ -40,17 +40,17 @@ public class FrmBajaIntendente extends javax.swing.JDialog {
 
         txtClave.setEditable(false);
         txtClave.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtClave.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtClave.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(txtClave, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 48, 326, -1));
 
         txtNombre.setEditable(false);
         txtNombre.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtNombre.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtNombre.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 87, 326, -1));
 
         txtAñoIngreso.setEditable(false);
         txtAñoIngreso.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtAñoIngreso.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtAñoIngreso.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(txtAñoIngreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 125, 326, -1));
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
@@ -83,12 +83,12 @@ public class FrmBajaIntendente extends javax.swing.JDialog {
 
         txtArea.setEditable(false);
         txtArea.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtArea.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtArea.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(txtArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 167, 326, -1));
 
         txtNivel.setEditable(false);
         txtNivel.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
-        txtNivel.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtNivel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(txtNivel, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 206, 326, -1));
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
@@ -121,7 +121,7 @@ public class FrmBajaIntendente extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-        int respuesta = JOptionPane.showConfirmDialog(this, "Esta seguro de eliminarlo", 
+         int respuesta = JOptionPane.showConfirmDialog(this, "Esta seguro de eliminarlo", 
                 "Confirmando eliminacion", 
                 JOptionPane.YES_NO_OPTION, 
                 JOptionPane.QUESTION_MESSAGE,
@@ -129,7 +129,11 @@ public class FrmBajaIntendente extends javax.swing.JDialog {
         if(respuesta == JOptionPane.YES_OPTION){
             Principal.adp.eliminar(celda);
             JOptionPane.showMessageDialog(this, "El intendente a sido eliminado satisfactoriamente", 
-                        "Eliminación exitosa", JOptionPane.ERROR_MESSAGE);
+                        "ELIMINACION EXITOSA", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "No se ha realizado la eliminación", 
+                        "ELIMINACION CANCELADA", JOptionPane.ERROR_MESSAGE);
         }
         this.dispose();
     }//GEN-LAST:event_btnEliminarActionPerformed
