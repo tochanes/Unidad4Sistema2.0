@@ -187,20 +187,31 @@ public class FrmAltaProfesor extends javax.swing.JDialog {
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         int clave, añoIngreso, horas;
         String nombre, titulo, departamento;
-        
-        clave = Integer.parseInt(txtClave.getText());
-        nombre = txtNombre.getText();
-        añoIngreso = Integer.parseInt(txtAñoIngreso.getText());
-        titulo = txtTitulo.getText();
-        departamento = txtDepartamento.getText();
-        horas = Integer.parseInt(txtHoras.getText());
-        Personal pers = new Profesor(clave, nombre, añoIngreso, titulo, departamento, horas);
-        
-        Principal.adp.agregar(pers);
-        JOptionPane.showMessageDialog(this, "Guardado con exito",
-                "GUARDADO", JOptionPane.INFORMATION_MESSAGE);
-        this.dispose();
-
+        try{
+            clave = Integer.parseInt(txtClave.getText());
+            nombre = txtNombre.getText();
+            añoIngreso = Integer.parseInt(txtAñoIngreso.getText());
+            if(añoIngreso > Principal.añoActual){
+                JOptionPane.showMessageDialog(this, "Ingresaste un año futuro, ingresa un año correcto",
+                        "AÑO FUTURO", JOptionPane.INFORMATION_MESSAGE);
+            } 
+            else{
+                titulo = txtTitulo.getText();
+                departamento = txtDepartamento.getText();
+                horas = Integer.parseInt(txtHoras.getText());
+                Personal pers = new Profesor(clave, nombre, añoIngreso, titulo, departamento, horas);
+                Principal.adp.agregar(pers);
+                JOptionPane.showMessageDialog(this, "Guardado con exito",
+                        "GUARDADO", JOptionPane.INFORMATION_MESSAGE);
+                this.dispose();
+            }
+        }catch(NumberFormatException nfe){
+            JOptionPane.showMessageDialog(this, "Ingresa solamente numeros enteros donde corresponda", 
+                            "CARÁCTER INVALIDO", JOptionPane.ERROR_MESSAGE);  
+        }catch(RuntimeException e){
+            JOptionPane.showMessageDialog(this, "Situacion anomala en tiempo de ejecución, vuelve a intentarlo", 
+                            "SITUACIÓN ANOMALA", JOptionPane.ERROR_MESSAGE);
+        } 
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
