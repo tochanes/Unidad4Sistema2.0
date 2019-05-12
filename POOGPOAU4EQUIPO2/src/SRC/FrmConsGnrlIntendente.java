@@ -1,7 +1,6 @@
 package SRC;
-
 import java.util.ArrayList;
-
+import javax.swing.ImageIcon;
 public class FrmConsGnrlIntendente extends javax.swing.JDialog {
     
     ArrayList<Personal>personal = new ArrayList<>();
@@ -9,6 +8,7 @@ public class FrmConsGnrlIntendente extends javax.swing.JDialog {
     public FrmConsGnrlIntendente(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/logoITCG.png")).getImage());
     }
 
     @SuppressWarnings("unchecked")
@@ -24,7 +24,9 @@ public class FrmConsGnrlIntendente extends javax.swing.JDialog {
                 formWindowOpened(evt);
             }
         });
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        tablaPersonal.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         tablaPersonal.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -36,24 +38,10 @@ public class FrmConsGnrlIntendente extends javax.swing.JDialog {
                 "Clave", "Nombre", "Area"
             }
         ));
+        tablaPersonal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jScrollPane1.setViewportView(tablaPersonal);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
-        );
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 780, 275));
 
         pack();
         setLocationRelativeTo(null);

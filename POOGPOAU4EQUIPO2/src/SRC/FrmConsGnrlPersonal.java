@@ -1,7 +1,6 @@
 package SRC;
-
 import java.util.ArrayList;
-
+import javax.swing.ImageIcon;
 public class FrmConsGnrlPersonal extends javax.swing.JDialog {
     
     ArrayList<Personal>personal = new ArrayList<>();
@@ -9,6 +8,7 @@ public class FrmConsGnrlPersonal extends javax.swing.JDialog {
     public FrmConsGnrlPersonal(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/logoITCG.png")).getImage());
     }
 
     @SuppressWarnings("unchecked")
@@ -25,6 +25,7 @@ public class FrmConsGnrlPersonal extends javax.swing.JDialog {
             }
         });
 
+        tablaPersonal.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         tablaPersonal.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -42,10 +43,10 @@ public class FrmConsGnrlPersonal extends javax.swing.JDialog {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 853, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

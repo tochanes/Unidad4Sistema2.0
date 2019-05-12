@@ -1,8 +1,7 @@
 package SRC;
-
 import java.util.Calendar;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
-
 public class Principal extends javax.swing.JFrame {
 
     static AdmonPersonal adp = new AdmonPersonal();
@@ -11,6 +10,7 @@ public class Principal extends javax.swing.JFrame {
     
     public Principal() {
         initComponents();
+    setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/logoITCG.png")).getImage());    
     }
 
     @SuppressWarnings("unchecked")
@@ -18,6 +18,10 @@ public class Principal extends javax.swing.JFrame {
     private void initComponents() {
 
         jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
+        logoTECNM = new javax.swing.JLabel();
+        copyright = new javax.swing.JLabel();
+        bienvenido = new javax.swing.JLabel();
+        fondo = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         opcSalir = new javax.swing.JMenuItem();
@@ -38,9 +42,33 @@ public class Principal extends javax.swing.JFrame {
         jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        logoTECNM.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/logoTECNM.png"))); // NOI18N
+        logoTECNM.setText(" ");
+        getContentPane().add(logoTECNM, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 60, -1, -1));
+
+        copyright.setFont(new java.awt.Font("Comic Sans MS", 2, 9)); // NOI18N
+        copyright.setText("Sistema Unidad 4, Registro de Personal, v 2.0.0 All rights Reserved, 2019 ");
+        getContentPane().add(copyright, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 380, -1, -1));
+
+        bienvenido.setFont(new java.awt.Font("Century Gothic", 3, 48)); // NOI18N
+        bienvenido.setForeground(new java.awt.Color(9, 9, 121));
+        bienvenido.setText("BIENVENIDO");
+        getContentPane().add(bienvenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 80, -1, -1));
+
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo.jpg"))); // NOI18N
+        fondo.setText(" ");
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-210, -210, 1030, 760));
+
+        jMenuBar1.setBackground(new java.awt.Color(159, 184, 215));
+        jMenuBar1.setBorder(null);
+        jMenuBar1.setBorderPainted(false);
 
         jMenu1.setText("Archivo");
+        jMenu1.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
 
+        opcSalir.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         opcSalir.setText("Salir");
         opcSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -52,9 +80,12 @@ public class Principal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Acciones");
+        jMenu2.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
 
         jMenu4.setText("Alta");
+        jMenu4.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
 
+        opcProfesorAltas.setFont(new java.awt.Font("Century Gothic", 2, 12)); // NOI18N
         opcProfesorAltas.setText("Profesor");
         opcProfesorAltas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,6 +94,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jMenu4.add(opcProfesorAltas);
 
+        opcIntendenteAltas.setFont(new java.awt.Font("Century Gothic", 2, 12)); // NOI18N
         opcIntendenteAltas.setText("Intendente");
         opcIntendenteAltas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,6 +105,7 @@ public class Principal extends javax.swing.JFrame {
 
         jMenu2.add(jMenu4);
 
+        opcModificaciones.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         opcModificaciones.setText("Modificacion");
         opcModificaciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,6 +114,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jMenu2.add(opcModificaciones);
 
+        opcBaja.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         opcBaja.setText("Baja");
         opcBaja.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,7 +126,9 @@ public class Principal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Consultas");
+        jMenu3.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
 
+        opcIndividual.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         opcIndividual.setText("Individual");
         opcIndividual.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,7 +138,9 @@ public class Principal extends javax.swing.JFrame {
         jMenu3.add(opcIndividual);
 
         jMenu5.setText("General");
+        jMenu5.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
 
+        opcPersonalTabla.setFont(new java.awt.Font("Century Gothic", 2, 12)); // NOI18N
         opcPersonalTabla.setText("Personal");
         opcPersonalTabla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,6 +149,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jMenu5.add(opcPersonalTabla);
 
+        opcProfesoresTabla.setFont(new java.awt.Font("Century Gothic", 2, 12)); // NOI18N
         opcProfesoresTabla.setText("Profesores");
         opcProfesoresTabla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,6 +158,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jMenu5.add(opcProfesoresTabla);
 
+        opcIntendenteTabla.setFont(new java.awt.Font("Century Gothic", 2, 12)); // NOI18N
         opcIntendenteTabla.setText("Intendentes");
         opcIntendenteTabla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,17 +173,6 @@ public class Principal extends javax.swing.JFrame {
 
         setJMenuBar(jMenuBar1);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 280, Short.MAX_VALUE)
-        );
-
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -155,7 +184,10 @@ public class Principal extends javax.swing.JFrame {
     private void opcProfesorAltasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcProfesorAltasActionPerformed
         if(Principal.adp.getCont() < 99){
             FrmAltaProfesor ap = new FrmAltaProfesor(this, true);
+            
             ap.setVisible(true);
+            ap.setResizable(false);
+            
         }
         else {
             JOptionPane.showMessageDialog(this, "La agenda ya esta llena",
@@ -166,7 +198,11 @@ public class Principal extends javax.swing.JFrame {
     private void opcIntendenteAltasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcIntendenteAltasActionPerformed
         if(Principal.adp.getCont() < 99){
             FrmAltaIntendente ai = new FrmAltaIntendente(this, true);
+            
+            
             ai.setVisible(true);
+            ai.setResizable(false);
+           
         }
         else {
             JOptionPane.showMessageDialog(this, "La agenda ya esta llena",
@@ -231,8 +267,8 @@ public class Principal extends javax.swing.JFrame {
 
     private void opcIndividualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcIndividualActionPerformed
         if(Principal.adp.getCont() > 0){   
-            FrmConsInd ci = new FrmConsInd(this, true);
-            ci.setVisible(true);
+            FrmConsInd cI = new FrmConsInd(this, true);
+            cI.setVisible(true);
         }
         else {
             JOptionPane.showMessageDialog(this, "La agenda esta vacia",
@@ -267,12 +303,20 @@ public class Principal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Principal().setVisible(true);
+            Principal principal = new Principal();
+            principal.setBounds(0,0,720,480);
+            principal.setVisible(true);
+            principal.setResizable(false);
+            principal.setLocationRelativeTo(null);
+
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel bienvenido;
+    private javax.swing.JLabel copyright;
+    private javax.swing.JLabel fondo;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
@@ -280,6 +324,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JLabel logoTECNM;
     private javax.swing.JMenuItem opcBaja;
     private javax.swing.JMenuItem opcIndividual;
     private javax.swing.JMenuItem opcIntendenteAltas;

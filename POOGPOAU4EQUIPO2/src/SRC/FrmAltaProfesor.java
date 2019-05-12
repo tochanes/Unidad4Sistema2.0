@@ -1,13 +1,12 @@
-
 package SRC;
-
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
-
 public class FrmAltaProfesor extends javax.swing.JDialog {
 
     public FrmAltaProfesor(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/logoITCG.png")).getImage());
     }
 
     @SuppressWarnings("unchecked")
@@ -22,132 +21,130 @@ public class FrmAltaProfesor extends javax.swing.JDialog {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         txtClave = new javax.swing.JTextField();
-        btnBuscar = new javax.swing.JButton();
         txtNombre = new javax.swing.JTextField();
         txtAñoIngreso = new javax.swing.JTextField();
         txtTitulo = new javax.swing.JTextField();
         txtDepartamento = new javax.swing.JTextField();
         txtHoras = new javax.swing.JTextField();
+        btnBuscar = new javax.swing.JButton();
         btnGuardar = new javax.swing.JButton();
+        btnVolver = new javax.swing.JButton();
+        fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(4700, 2800));
+        setMinimumSize(new java.awt.Dimension(470, 320));
+        setPreferredSize(new java.awt.Dimension(470, 350));
+        setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 3, 14)); // NOI18N
         jLabel1.setText("ALTA PROFESOR");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(196, 11, -1, -1));
 
+        jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
         jLabel2.setText("CLAVE:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 51, -1, -1));
 
+        jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
         jLabel3.setText("NOMBRE:");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 92, -1, -1));
 
+        jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
         jLabel4.setText("AÑO DE INGRESO:");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 131, -1, -1));
 
+        jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
         jLabel5.setText("TITULO:");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, -1, -1));
 
+        jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
         jLabel6.setText("DEPARTAMENTO:");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 209, -1, -1));
 
+        jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 11)); // NOI18N
         jLabel7.setText("HORAS:");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 248, -1, -1));
 
-        btnBuscar.setText("BUSCAR");
+        txtClave.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
+        txtClave.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        getContentPane().add(txtClave, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 48, 221, -1));
+
+        txtNombre.setEditable(false);
+        txtNombre.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
+        txtNombre.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        getContentPane().add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 89, 312, -1));
+
+        txtAñoIngreso.setEditable(false);
+        txtAñoIngreso.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
+        txtAñoIngreso.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        getContentPane().add(txtAñoIngreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 128, 312, -1));
+
+        txtTitulo.setEditable(false);
+        txtTitulo.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
+        txtTitulo.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        getContentPane().add(txtTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 167, 312, -1));
+
+        txtDepartamento.setEditable(false);
+        txtDepartamento.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
+        txtDepartamento.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        getContentPane().add(txtDepartamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 206, 312, -1));
+
+        txtHoras.setEditable(false);
+        txtHoras.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
+        txtHoras.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        getContentPane().add(txtHoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 245, 312, -1));
+
+        btnBuscar.setFont(new java.awt.Font("Century Gothic", 2, 11)); // NOI18N
+        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/bsq.png"))); // NOI18N
+        btnBuscar.setText(" ");
+        btnBuscar.setToolTipText("Buscar");
+        btnBuscar.setBorderPainted(false);
+        btnBuscar.setContentAreaFilled(false);
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBuscarActionPerformed(evt);
             }
         });
+        getContentPane().add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, -1, -1));
 
-        txtNombre.setEditable(false);
-
-        txtAñoIngreso.setEditable(false);
-
-        txtTitulo.setEditable(false);
-
-        txtDepartamento.setEditable(false);
-
-        txtHoras.setEditable(false);
-
-        btnGuardar.setText("GUARDAR");
+        btnGuardar.setFont(new java.awt.Font("Century Gothic", 2, 11)); // NOI18N
+        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/gdr.png"))); // NOI18N
+        btnGuardar.setText(" ");
+        btnGuardar.setToolTipText("Guardar");
+        btnGuardar.setBorderPainted(false);
+        btnGuardar.setContentAreaFilled(false);
         btnGuardar.setEnabled(false);
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuardarActionPerformed(evt);
             }
         });
+        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 50, 30));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jLabel2))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(txtClave, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btnBuscar)
-                                        .addGap(105, 105, 105))
-                                    .addComponent(txtDepartamento)
-                                    .addComponent(txtTitulo)
-                                    .addComponent(txtAñoIngreso)
-                                    .addComponent(txtHoras)
-                                    .addComponent(txtNombre)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(138, 138, 138)
-                        .addComponent(jLabel1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(txtClave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBuscar))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(txtAñoIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(txtDepartamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(txtHoras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        btnVolver.setFont(new java.awt.Font("Century Gothic", 2, 11)); // NOI18N
+        btnVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/vlv.png"))); // NOI18N
+        btnVolver.setText(" ");
+        btnVolver.setToolTipText("Volver");
+        btnVolver.setBorderPainted(false);
+        btnVolver.setContentAreaFilled(false);
+        btnVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
+
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo.jpg"))); // NOI18N
+        fondo.setText(" ");
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-530, -480, 990, 810));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
-        try{    
+        try{
             int clave, celda;
             clave = Integer.parseInt(txtClave.getText());
             if(clave > 100 && clave < 1000){
@@ -163,58 +160,52 @@ public class FrmAltaProfesor extends javax.swing.JDialog {
                     btnGuardar.setEnabled(true);
                 }
                 else{
-                    JOptionPane.showMessageDialog(this, "Esa clave ya esta registrada", 
-                            "CLAVE EXISTENTE", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Esa clave ya esta registrada",
+                        "CLAVE EXISTENTE", JOptionPane.ERROR_MESSAGE);
                 }
             }
             else{
-                JOptionPane.showMessageDialog(this, "Ingrese una clave de 101 a 999", 
-                            "CLAVE FUERA DE RANGO", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Ingrese una clave de 101 a 999",
+                    "CLAVE FUERA DE RANGO", JOptionPane.ERROR_MESSAGE);
             }
         }catch(NumberFormatException nfe){
-            JOptionPane.showMessageDialog(this, "Ingresa solamente numeros enteros ", 
-                            "CARÁCTER INVALIDO", JOptionPane.ERROR_MESSAGE);  
+            JOptionPane.showMessageDialog(this, "Ingresa solamente numeros enteros ",
+                "CARÁCTER INVALIDO", JOptionPane.ERROR_MESSAGE);
         }catch(RuntimeException e){
-            JOptionPane.showMessageDialog(this, "Situacion anomala en tiempo de ejecución, vuelve a intentarlo", 
-                            "SITUACIÓN ANOMALA", JOptionPane.ERROR_MESSAGE);
-        } 
-        
+            JOptionPane.showMessageDialog(this, "Situacion anomala en tiempo de ejecución, vuelve a intentarlo",
+                "SITUACION ANOMALA", JOptionPane.ERROR_MESSAGE);
+        }
+
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         int clave, añoIngreso, horas;
         String nombre, titulo, departamento;
         
-        try{
-            clave = Integer.parseInt(txtClave.getText());
-            nombre = txtNombre.getText();
-            añoIngreso = Integer.parseInt(txtAñoIngreso.getText());
-            if(añoIngreso > Principal.añoActual){
-                JOptionPane.showMessageDialog(this, "Ingresaste un año futuro, ingresa un año correcto",
-                        "AÑO FUTURO", JOptionPane.INFORMATION_MESSAGE);
-            } 
-            else{
-                titulo = txtTitulo.getText();
-                departamento = txtDepartamento.getText();
-                horas = Integer.parseInt(txtHoras.getText());
-                Personal pers = new Profesor(clave, nombre, añoIngreso, titulo, departamento, horas);
-                Principal.adp.agregar(pers);
-                JOptionPane.showMessageDialog(this, "Guardado con exito",
-                        "GUARDADO", JOptionPane.INFORMATION_MESSAGE);
-                this.dispose();
-            }
-        }catch(NumberFormatException nfe){
-            JOptionPane.showMessageDialog(this, "Ingresa solamente numeros enteros donde corresponda", 
-                            "CARÁCTER INVALIDO", JOptionPane.ERROR_MESSAGE);  
-        }catch(RuntimeException e){
-            JOptionPane.showMessageDialog(this, "Situacion anomala en tiempo de ejecución, vuelve a intentarlo", 
-                            "SITUACIÓN ANOMALA", JOptionPane.ERROR_MESSAGE);
-        } 
+        clave = Integer.parseInt(txtClave.getText());
+        nombre = txtNombre.getText();
+        añoIngreso = Integer.parseInt(txtAñoIngreso.getText());
+        titulo = txtTitulo.getText();
+        departamento = txtDepartamento.getText();
+        horas = Integer.parseInt(txtHoras.getText());
+        Personal pers = new Profesor(clave, nombre, añoIngreso, titulo, departamento, horas);
+        
+        Principal.adp.agregar(pers);
+        JOptionPane.showMessageDialog(this, "Guardado con exito",
+                "GUARDADO", JOptionPane.INFORMATION_MESSAGE);
+        this.dispose();
+
     }//GEN-LAST:event_btnGuardarActionPerformed
+
+    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnVolverActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnGuardar;
+    private javax.swing.JButton btnVolver;
+    private javax.swing.JLabel fondo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
