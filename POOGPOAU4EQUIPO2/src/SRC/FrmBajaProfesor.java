@@ -127,7 +127,7 @@ public class FrmBajaProfesor extends javax.swing.JDialog {
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo.jpg"))); // NOI18N
         fondo.setText("jLabel8");
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-520, -500, 970, 820));
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-520, -490, 970, 800));
 
         pack();
         setLocationRelativeTo(null);
